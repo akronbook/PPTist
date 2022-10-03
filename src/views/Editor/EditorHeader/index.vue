@@ -5,13 +5,15 @@
         <div class="menu-item"><IconFolderClose /> <span class="text">文件</span></div>
         <template #overlay>
           <Menu>
-            <FileInput accept=".pptist"  @change="files => importSpecificFile(files)">
-              <MenuItem>导入 pptist 文件</MenuItem>
+            <FileInput accept=".qt"  @change="files => importSpecificFile(files)">
+              <MenuItem>导入 qt 文件</MenuItem>
             </FileInput>
-            <MenuItem @click="setDialogForExport('pptist')">导出 pptist 文件</MenuItem>
+            <MenuItem @click="setDialogForExport('qt')">导出 qt 文件</MenuItem>
             <MenuItem @click="setDialogForExport('pptx')">导出 PPTX</MenuItem>
             <MenuItem @click="setDialogForExport('image')">导出图片</MenuItem>
+            <!--
             <MenuItem @click="setDialogForExport('json')">导出 JSON</MenuItem>
+             -->
             <MenuItem @click="setDialogForExport('pdf')">打印 / 导出 PDF</MenuItem>
           </Menu>
         </template>
@@ -43,13 +45,16 @@
         <div class="menu-item"><IconHelpcenter /> <span class="text">帮助</span></div>
         <template #overlay>
           <Menu>
+            <!-- Chen
             <MenuItem @click="goIssues()">意见反馈</MenuItem>
+             -->
             <MenuItem @click="hotkeyDrawerVisible = true">快捷键</MenuItem>
           </Menu>
         </template>
       </Dropdown>
     </div>
 
+    <!-- Chen
     <div class="right">
       <Tooltip :mouseLeaveDelay="0" title="导出">
         <div class="menu-item" @click="setDialogForExport('pptx')">
@@ -65,7 +70,7 @@
         <div class="menu-item"><IconGithub size="18" fill="#666" /></div>
       </a>
     </div>
-
+    -->
     <Drawer
       width="320"
       placement="right"

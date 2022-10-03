@@ -55,13 +55,13 @@ export default () => {
     }, 200)
   }
   
-  // 导出pptist文件（特有 .pptist 后缀文件）
+  // 导出qt文件（特有 .pptist 后缀文件）
   const exportSpecificFile = (_slides: Slide[]) => {
     const blob = new Blob([encrypt(JSON.stringify(_slides))], { type: '' })
-    saveAs(blob, 'pptist_slides.pptist')
+    saveAs(blob, 'pptist_slides.qt')
   }
   
-  // 导入pptist文件
+  // 导入qt文件
   const importSpecificFile = (files: FileList, cover = false) => {
     const file = files[0]
 

@@ -1,6 +1,7 @@
 import { Slide } from '@/types/slides'
 
 export const slides: Slide[] = [
+  /* Chen
   {
     id: 'test-slide-1',
     elements: [
@@ -75,6 +76,7 @@ export const slides: Slide[] = [
       color: '#ffffff',
     },
   },
+  */
   {
     id: 'test-slide-2',
     elements: [

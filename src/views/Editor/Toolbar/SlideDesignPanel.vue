@@ -101,8 +101,10 @@
       <div style="flex: 2;">画布尺寸：</div>
       <Select style="flex: 3;" :value="viewportRatio" @change="value => updateViewportRatio(value as number)">
         <SelectOption :value="0.5625">宽屏 16 : 9</SelectOption>
+        <!-- Chen
         <SelectOption :value="0.625">宽屏 16 ：10</SelectOption>
         <SelectOption :value="0.75">标准 4 ：3</SelectOption>
+        -->
       </Select>
     </div>
 
