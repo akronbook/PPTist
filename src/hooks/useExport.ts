@@ -47,7 +47,7 @@ export default () => {
 
       toImage(domRef, config).then(dataUrl => {
         exporting.value = false
-        saveAs(dataUrl, `pptist_slides.${format}`)
+        saveAs(dataUrl, `qt_slides.${format}`)
       }).catch(() => {
         exporting.value = false
         message.error('导出图片失败')
@@ -58,7 +58,7 @@ export default () => {
   // 导出qt文件（特有 .pptist 后缀文件）
   const exportSpecificFile = (_slides: Slide[]) => {
     const blob = new Blob([encrypt(JSON.stringify(_slides))], { type: '' })
-    saveAs(blob, 'pptist_slides.qt')
+    saveAs(blob, 'qt_slides.qt')
   }
   
   // 导入qt文件
@@ -82,7 +82,7 @@ export default () => {
   // 导出JSON文件
   const exportJSON = () => {
     const blob = new Blob([JSON.stringify(slides.value)], { type: '' })
-    saveAs(blob, 'pptist_slides.json')
+    saveAs(blob, 'qt_slides.json')
   }
 
   // 格式化颜色值为 透明度 + HexString，供pptxgenjs使用
@@ -758,7 +758,7 @@ export default () => {
         }
       }
     }
-    pptx.writeFile({ fileName: `pptist.pptx` }).then(() => exporting.value = false).catch(() => {
+    pptx.writeFile({ fileName: `qt.pptx` }).then(() => exporting.value = false).catch(() => {
       exporting.value = false
       message.error('导出失败')
     })
