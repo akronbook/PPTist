@@ -3,6 +3,10 @@
 const StyleLintPlugin = require('stylelint-webpack-plugin')
 
 module.exports = {
+  chainWebpack: config => {
+    config.plugins.delete('pwa');
+    config.plugins.delete('workbox');
+  },
   publicPath: './',
   css: {
     loaderOptions: {
